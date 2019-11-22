@@ -15,4 +15,13 @@ after_success:
  - docker build -t ravi/multi-server ./server
  - docker build -t ravi/multi-worker ./worker
 
- # These images push to Docker-hub
+# Login into the Docker CLI
+ - echo "DOCKER_ID"
+ - echo "DOCKER_PASSWORD"
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+# These images push to Docker-hub
+ - docker push ravi/multi-client
+ - docker push ravi/multi-nginx
+ - docker push ravi/multi-server
+ - docker push ravi/multi-worker
