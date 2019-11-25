@@ -21,7 +21,7 @@ after_success:
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # These images push to Docker-hub
- - docker push ravi/multi-client
- - docker push ravi/multi-nginx
- - docker push ravi/multi-server
- - docker push ravi/multi-worker
+ - docker push ravi6682/multi-client
+ - docker push ravi6682/multi-nginx
+ - docker push ravi6682/multi-server
+ - docker push ravi6682/multi-worker
