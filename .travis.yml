@@ -10,10 +10,10 @@ script:
  - docker run -e CI=true ravi/react-test npm test
 
 after_success:
- - docker build -t ravi/multi-client ./client
- - docker build -t ravi/multi-nginx ./nginx
- - docker build -t ravi/multi-server ./server
- - docker build -t ravi/multi-worker ./worker
+ - docker build -t ravi6682/multi-client ./client
+ - docker build -t ravi6682/multi-nginx ./nginx
+ - docker build -t ravi6682/multi-server ./server
+ - docker build -t ravi6682/multi-worker ./worker
 
 # Login into the Docker CLI
  - echo "DOCKER_ID"
